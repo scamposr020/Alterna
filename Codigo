@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+        // Your code here!
+        
+        System.out.println(alternaMayusculas("heyy"));
+    }
+    private static String alternaMayusculas(String mensaje) {
+      String[] strArr = mensaje.split(" ");
+      String finalStr ="";
+      for (int i = 0; i < strArr.length; i++) {
+          String str = strArr[i];
+          int min = Math.min(i + 1, str.length());
+          finalStr = str.substring(0, min) + (str.substring(min, str.length())).toUpperCase();
+         
+      }
+      return finalStr;
+    }
+}
